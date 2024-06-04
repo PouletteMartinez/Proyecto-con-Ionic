@@ -1,0 +1,9 @@
+
+  <swiper-container [autoplay]="{ delay: delay, stopOnLastSlide: true }">
+    <swiper-slide class="back-slide" *ngFor="let swip of listImgs">
+      <p class="message-loader">{{message}}</p>
+    <img [src]="swip.img" [alt]="swip.description">
+    <p class="description-data">{{swip.description}}</p>
+    <ion-button *ngIf="swip.btn !== ''" (click)="cambia()" [disabled]="disbaledBtn" class="btn-poke">{{swip.btn}}</ion-button>
+    </swiper-slide>
+  </swiper-container>
